@@ -16,9 +16,22 @@ func verifyIsUnique(testString string, array []bool) bool {
 	return true
 }
 
+func verifyIsUniqueMySolution(testString string, letterChecker map[int32]int) bool {
+	for _, char := range testString {
+		letterChecker[char] += 1
+
+		if letterChecker[char] > 1 {
+			return false
+		}
+	}
+	return true
+}
+
 func main() {
 	var testString = "abcdefAa"
 	var array = make([]bool, 128)
+	var letterChecker = make(map[int32]int)
 
 	println(verifyIsUnique(testString, array))
+	println(verifyIsUniqueMySolution(testString, letterChecker))
 }
