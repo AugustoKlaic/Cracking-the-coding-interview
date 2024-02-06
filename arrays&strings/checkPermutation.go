@@ -1,9 +1,26 @@
 package main
 
+import (
+	"sort"
+	"strings"
+)
+
 // Given two strings, write a method to decide if one is permutation of the other
 
 func isPermutation(first, second string) bool {
-	return true
+	if len(first) != len(second) {
+		return false
+	}
+
+	return mySort(first) == mySort(second)
+}
+
+func mySort(receivedString string) string {
+	var sorted []string = strings.Split(receivedString, "")
+	sort.Slice(sorted, func(i int, j int) bool {
+		return sorted[i] < sorted[j]
+	})
+	return strings.Join(sorted, "")
 }
 
 func isPermutationMySolution(first, second string) bool {
@@ -35,4 +52,5 @@ func main() {
 
 	var x, y = "abcd", "dbca"
 	println(isPermutationMySolution(x, y))
+	println(isPermutation(x, y))
 }
