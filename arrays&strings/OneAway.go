@@ -5,7 +5,7 @@ import "math"
 func checkEditsAway(stringOne, stringTwo string) bool {
 	if stringOne == stringTwo {
 		return true
-	} else if math.Abs(float64(len(stringOne))-float64(len(stringOne))) > 1 {
+	} else if math.Abs(float64(len(stringOne))-float64(len(stringTwo))) > 1 {
 		return false
 	} else {
 		var stringOneArray, stringTwoArray = []rune(stringOne), []rune(stringTwo)
@@ -57,7 +57,7 @@ func checkEditsAway(stringOne, stringTwo string) bool {
 func main() {
 
 	var stringOne = "pale"
-	var stringTwo = "kle"
+	var stringTwo = "ple"
 
 	println(checkEditsAway(stringOne, stringTwo))
 }
