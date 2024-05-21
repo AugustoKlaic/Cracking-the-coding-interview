@@ -14,23 +14,27 @@ func checkEditsAway(stringOne, stringTwo string) bool {
 		if len(stringOneArray) > len(stringTwoArray) {
 			// adding to second string operation
 			for index := 0; index < len(stringOneArray); index++ {
-				if stringOneArray[index] != stringTwoArray[index] {
+				if index > len(stringTwoArray)-1 {
+					stringTwoArray = append(stringTwoArray, stringOneArray[index])
+					countOperation++
+				} else if stringOneArray[index] != stringTwoArray[index] {
 					firstPart := append([]rune(nil), stringTwoArray[:index]...)
 					secondPart := append([]rune(nil), stringTwoArray[index:]...)
 					stringTwoArray = append(append(firstPart, stringOneArray[index]), secondPart...)
 					countOperation++
 				}
 			}
-			println(string(stringOneArray), " - ", string(stringTwoArray))
 		} else if len(stringOneArray) < len(stringTwoArray) {
 			// removing from second string operation
 			for index := 0; index < len(stringTwoArray); index++ {
-				if stringOneArray[index] != stringTwoArray[index] {
+				if index > len(stringOneArray)-1 {
+					stringTwoArray = stringOneArray[:len(stringTwoArray)-1]
+					countOperation++
+				} else if stringOneArray[index] != stringTwoArray[index] {
 					stringTwoArray = append(stringTwoArray[index:], stringTwoArray[index+1:]...)
 					countOperation++
 				}
 			}
-			println(string(stringOneArray), " - ", string(stringTwoArray))
 		} else {
 			// replace operation
 			for index := 0; index < len(stringOneArray); index++ {
@@ -39,7 +43,6 @@ func checkEditsAway(stringOne, stringTwo string) bool {
 					countOperation++
 				}
 			}
-			println(stringOneArray, " - ", stringTwoArray)
 		}
 
 		if countOperation <= 1 {
@@ -50,14 +53,11 @@ func checkEditsAway(stringOne, stringTwo string) bool {
 	}
 }
 
-// pale , ple = true
-// pales, pale = true
-// pale , bale = true
-// pale , bake = false
 func main() {
 
-	var stringOne = "pale"
-	var stringTwo = "ple"
+	println(checkEditsAway("pale", "ple"))   // = true
+	println(checkEditsAway("pale", "pales")) // = true
+	println(checkEditsAway("pale", "bale"))  // = true
+	println(checkEditsAway("pale", "bake"))  // = false
 
-	println(checkEditsAway(stringOne, stringTwo))
 }
