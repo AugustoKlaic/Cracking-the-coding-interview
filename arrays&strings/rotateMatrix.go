@@ -4,7 +4,7 @@ import "fmt"
 
 // Given an image represented by N x N matrix, where each pixel in the image is represented by an integer, write a code
 // to rotate the image by 90 degrees.
-
+// Add the book solution another day here
 func rotate(matrix *[][]int) [][]int {
 
 	var matrixLength = len(*matrix)
@@ -32,13 +32,6 @@ func rotate(matrix *[][]int) [][]int {
 	return newMatrix
 }
 
-// linha 1 -> coluna N
-// linha N -> coluna 1
-// {1,2,3}  {1,4,7}  {7,4,1}
-// {4,5,6}  {2,5,8}  {8,5,2}
-// {7,8,9}  {3,6,9}  {9,6,3}
-// linha vira coluna
-// depois trocar colunas
 func main() {
 
 	matrix := [][]int{{1, 2, 3},
