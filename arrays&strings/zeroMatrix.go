@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// Write an algorithm such that if an element in an M x N matrix is 0, it's entire row and column are set to 0
+
 func zeroMatrix(matrix *[][]int) {
 	var matrixLengthX = len(*matrix)
 	var matrixLengthY = len((*matrix)[0])
