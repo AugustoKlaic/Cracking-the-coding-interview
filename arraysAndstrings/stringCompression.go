@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 import "strconv"
 
@@ -24,7 +24,7 @@ func compressString(stringTobeCompressed string) string {
 	}
 }
 
-func main() {
+func ExecuteStringCompression() {
 
 	var stringTobeCompressed = "aabccccaaa"
 	println(compressString(stringTobeCompressed)) // a2b1c4a3

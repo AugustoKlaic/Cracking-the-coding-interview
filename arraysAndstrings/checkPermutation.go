@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 import (
 	"sort"
@@ -48,7 +48,7 @@ func isPermutationMySolution(first, second string) bool {
 	return true
 }
 
-func main() {
+func ExecuteCheckPermutation() {
 
 	var x, y = "abcd", "dbca"
 	println(isPermutationMySolution(x, y))

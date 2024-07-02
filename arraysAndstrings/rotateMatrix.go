@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 import "fmt"
 
@@ -32,7 +32,7 @@ func rotate(matrix *[][]int) [][]int {
 	return newMatrix
 }
 
-func main() {
+func ExecuteRotateMatrix() {
 
 	matrix := [][]int{{1, 2, 3},
 		{4, 5, 6},

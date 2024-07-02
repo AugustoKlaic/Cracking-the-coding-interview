@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 // Given a method "isSubstring" which checks if one word is a substring of another. Given two strings s1 and s2
 // write a code to check if s2 is a rotation of s1 using only one call to isSubstring.
@@ -32,7 +32,7 @@ func isSubstring(string1, string2 string) bool {
 	return false
 }
 
-func main() {
+func ExecuteStringRotation() {
 	var string1, string2 = "waterbkttle", "erbottlewat"
 
 	println(isSubstring(string1, string2))

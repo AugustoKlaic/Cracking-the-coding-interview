@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 import "strings"
 
@@ -56,7 +56,7 @@ func urlifyMySlution(originalUrl []string) []string {
 	return originalUrl
 }
 
-func main() {
+func ExecuteURLify() {
 	var url = []string{"here", " ", "have", " ", "some", " ", " ", " ", "spaces", " ", " ", "in", " ", "the", " ", "url"}
 
 	println(strings.Join(urlifyMySlution(url), ""))

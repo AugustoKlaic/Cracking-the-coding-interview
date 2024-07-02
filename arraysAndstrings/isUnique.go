@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 // Implement an algorithm to determine if a string has all unique characters
 // (not using other data structures instead of arrays and strings)
@@ -27,7 +27,7 @@ func verifyIsUniqueMySolution(testString string, letterChecker map[int32]int) bo
 	return true
 }
 
-func main() {
+func ExecuteIsUnique() {
 	var testString = "abcdefAa"
 	var array = make([]bool, 128)
 	var letterChecker = make(map[int32]int)

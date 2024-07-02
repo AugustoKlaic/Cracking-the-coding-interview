@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 import "strings"
 
@@ -39,7 +39,7 @@ func createPermutations(wordToPermute string, startOfString, sizeOfString int) [
 	return permutedWords
 }
 
-func main() {
+func executePalindromePermutation() {
 	var stringPalindromePermutation = "sasa"
 	var permutedWords []string = createPermutations(stringPalindromePermutation, 0, len(stringPalindromePermutation)-1)
 	hasPalindromes, palindromeList := checkPalindromePermutation(permutedWords)

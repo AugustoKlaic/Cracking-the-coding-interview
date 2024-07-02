@@ -1,8 +1,6 @@
-package main
+package arraysAndStrings
 
-import "fmt"
-
-// Write an algorithm such that if an element in an M x N matrix is 0, it's entire row and column are set to 0
+import "cracking-the-coding-interview/commons"
 
 func zeroMatrix(matrix *[][]int) {
 	var matrixLengthX = len(*matrix)
@@ -36,15 +34,9 @@ func contains(slice []int, value int) bool {
 	return false
 }
 
-func main() {
+func ExecuteZeroMatrix() {
 	matrix := [][]int{{1, 2, 3}, {4, 0, 6}, {7, 8, 9}}
 
 	zeroMatrix(&matrix)
-
-	for _, row := range matrix {
-		for _, val := range row {
-			fmt.Printf("%4d", val) // formata com 4 espaços para alinhar
-		}
-		fmt.Println() // nova linha após cada linha da matriz
-	}
+	commons.PrintMatrix(&matrix)
 }

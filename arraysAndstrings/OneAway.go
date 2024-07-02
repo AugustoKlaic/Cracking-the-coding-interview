@@ -1,4 +1,4 @@
-package main
+package arraysAndStrings
 
 import "math"
 
@@ -56,7 +56,7 @@ func checkEditsAway(stringOne, stringTwo string) bool {
 	}
 }
 
-func main() {
+func ExecuteOneAway() {
 
 	println(checkEditsAway("pale", "ple"))   // = true
 	println(checkEditsAway("pale", "pales")) // = true
