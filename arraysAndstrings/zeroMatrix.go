@@ -1,6 +1,6 @@
 package arraysAndStrings
 
-import "cracking-the-coding-interview/commons"
+import utils "cracking-the-coding-interview/commons"
 
 func zeroMatrix(matrix *[][]int) {
 	var matrixLengthX = len(*matrix)
@@ -18,25 +18,15 @@ func zeroMatrix(matrix *[][]int) {
 
 	for i := 0; i < matrixLengthX; i++ {
 		for j := 0; j < matrixLengthY; j++ {
-			if contains(foundZeroCoordinateX, i) || contains(foundZeroCoordinateY, j) {
+			if utils.Contains(foundZeroCoordinateX, i) || utils.Contains(foundZeroCoordinateY, j) {
 				(*matrix)[i][j] = 0
 			}
 		}
 	}
 }
 
-func contains(slice []int, value int) bool {
-	for _, v := range slice {
-		if v == value {
-			return true
-		}
-	}
-	return false
-}
-
 func ExecuteZeroMatrix() {
 	matrix := [][]int{{1, 2, 3}, {4, 0, 6}, {7, 8, 9}}
-
 	zeroMatrix(&matrix)
-	commons.PrintMatrix(&matrix)
+	utils.PrintMatrix(&matrix)
 }

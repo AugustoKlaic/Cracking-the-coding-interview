@@ -3,7 +3,9 @@ package arraysAndStrings
 // Implement an algorithm to determine if a string has all unique characters
 // (not using other data structures instead of arrays and strings)
 
-func verifyIsUnique(testString string, array []bool) bool {
+func verifyIsUnique(testString string) bool {
+	var array = make([]bool, 128)
+
 	for _, char := range testString {
 		var hash = int(char)
 
@@ -16,7 +18,9 @@ func verifyIsUnique(testString string, array []bool) bool {
 	return true
 }
 
-func verifyIsUniqueMySolution(testString string, letterChecker map[int32]int) bool {
+func verifyIsUniqueMySolution(testString string) bool {
+	var letterChecker = make(map[int32]int)
+
 	for _, char := range testString {
 		letterChecker[char] += 1
 
@@ -29,9 +33,7 @@ func verifyIsUniqueMySolution(testString string, letterChecker map[int32]int) bo
 
 func ExecuteIsUnique() {
 	var testString = "abcdefAa"
-	var array = make([]bool, 128)
-	var letterChecker = make(map[int32]int)
 
-	println(verifyIsUnique(testString, array))
-	println(verifyIsUniqueMySolution(testString, letterChecker))
+	println(verifyIsUnique(testString))
+	println(verifyIsUniqueMySolution(testString))
 }

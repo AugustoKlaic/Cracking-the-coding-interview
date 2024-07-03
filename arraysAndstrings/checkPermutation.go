@@ -1,8 +1,7 @@
 package arraysAndStrings
 
 import (
-	"sort"
-	"strings"
+	utils "cracking-the-coding-interview/commons"
 )
 
 // Given two strings, write a method to decide if one is permutation of the other
@@ -12,15 +11,7 @@ func isPermutation(first, second string) bool {
 		return false
 	}
 
-	return mySort(first) == mySort(second)
-}
-
-func mySort(receivedString string) string {
-	var sorted []string = strings.Split(receivedString, "")
-	sort.Slice(sorted, func(i int, j int) bool {
-		return sorted[i] < sorted[j]
-	})
-	return strings.Join(sorted, "")
+	return utils.MySort(first) == utils.MySort(second)
 }
 
 func isPermutationMySolution(first, second string) bool {

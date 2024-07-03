@@ -1,10 +1,13 @@
 package arraysAndStrings
 
-import "fmt"
+import (
+	utils "cracking-the-coding-interview/commons"
+)
 
 // Given an image represented by N x N matrix, where each pixel in the image is represented by an integer, write a code
 // to rotate the image by 90 degrees.
 // Add the book solution another day here
+
 func rotate(matrix *[][]int) [][]int {
 
 	var matrixLength = len(*matrix)
@@ -39,11 +42,5 @@ func ExecuteRotateMatrix() {
 		{7, 8, 9}}
 
 	var newMatrix = rotate(&matrix)
-
-	for _, row := range newMatrix {
-		for _, val := range row {
-			fmt.Printf("%4d", val) // formata com 4 espaços para alinhar
-		}
-		fmt.Println() // nova linha após cada linha da matriz
-	}
+	utils.PrintMatrix(&newMatrix)
 }
