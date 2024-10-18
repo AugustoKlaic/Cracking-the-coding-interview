@@ -11,13 +11,3 @@ func NewNode(data int) *Node {
 		data: data,
 	}
 }
-
-func (actual *Node) appendToTail(data int) {
-	end := NewNode(data)
-
-	for actual.next != nil {
-		actual = actual.next
-	}
-
-	actual.next = end
-}
