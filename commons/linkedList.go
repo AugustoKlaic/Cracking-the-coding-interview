@@ -10,6 +10,10 @@ func NewLinkedList(node Node) *LinkedList {
 	}
 }
 
+func (list *LinkedList) GetHead() *Node {
+	return list.head
+}
+
 func (list *LinkedList) appendToTail(data int) {
 	end := NewNode(data)
 	node := list.head
@@ -28,12 +32,12 @@ func (list *LinkedList) deleteNode(head *Node, data int) *Node {
 
 	node := head
 
-	if node.data == data {
+	if node.Data == data {
 		return head.next
 	}
 
 	for node.next != nil {
-		if node.next.data == data {
+		if node.next.Data == data {
 			node.next = node.next.next
 			return head
 		}
