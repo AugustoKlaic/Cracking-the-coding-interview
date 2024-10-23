@@ -4,10 +4,23 @@ type LinkedList struct {
 	head *Node
 }
 
-func NewLinkedList(node Node) *LinkedList {
-	return &LinkedList{
-		head: &node,
+func NewLinkedList(nodes ...Node) *LinkedList {
+	if len(nodes) == 0 {
+		return &LinkedList{head: nil}
 	}
+
+	linkedList := &LinkedList{
+		head: &nodes[0],
+	}
+
+	current := linkedList.head
+
+	for i := 1; i < len(nodes); i++ {
+		current.next = &nodes[i]
+		current = current.next
+	}
+
+	return linkedList
 }
 
 func (list *LinkedList) GetHead() *Node {

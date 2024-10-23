@@ -15,19 +15,30 @@ func removeDuplicates(linkedList *LinkedList) {
 
 		if duplicateChecker[actual.Data] > 1 {
 			previous.SetNext(actual.GetNext())
-
+		} else {
+			previous = actual
 		}
 
 		actual = actual.GetNext()
 	}
-
 }
 
 func ExecuteRemoveDups() {
 
-	node := NewNode(1)
-	linkedList := NewLinkedList(*node)
+	node1 := NewNode(1)
+	node2 := NewNode(1)
+	node3 := NewNode(2)
+	node4 := NewNode(3)
+
+	linkedList := NewLinkedList(*node1, *node2, *node3, *node4)
 
 	removeDuplicates(linkedList)
+
+	node := linkedList.GetHead()
+
+	for node != nil {
+		println(node.Data)
+		node = node.GetNext()
+	}
 
 }

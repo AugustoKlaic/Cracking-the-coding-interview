@@ -1,6 +1,9 @@
 package main
 
-import arraysAndStrings "cracking-the-coding-interview/arraysAndstrings"
+import (
+	arraysAndStrings "cracking-the-coding-interview/arraysAndstrings"
+	linkedLists "cracking-the-coding-interview/linkedLists"
+)
 
 func main() {
 
@@ -13,4 +16,6 @@ func main() {
 	arraysAndStrings.ExecuteStringCompression()
 	arraysAndStrings.ExecuteStringRotation()
 	arraysAndStrings.ExecuteURLify()
+
+	linkedLists.ExecuteRemoveDups()
 }
