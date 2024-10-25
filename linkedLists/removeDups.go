@@ -23,6 +23,23 @@ func removeDuplicates(linkedList *LinkedList) {
 	}
 }
 
+func removeDuplicatesBookSolutionWithoutBuffer(linkedList *LinkedList) {
+	actual := linkedList.GetHead()
+
+	for actual != nil {
+		runner := actual
+		for runner.GetNext() != nil {
+			if runner.GetNext().Data == actual.Data {
+				runner.SetNext(runner.GetNext().GetNext())
+			} else {
+				runner = runner.GetNext()
+			}
+		}
+		actual = actual.GetNext()
+	}
+
+}
+
 func ExecuteRemoveDups() {
 
 	node1 := NewNode(1)
