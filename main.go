@@ -18,4 +18,5 @@ func main() {
 	arraysAndStrings.ExecuteURLify()
 
 	linkedLists.ExecuteRemoveDups()
+	linkedLists.ExecuteKthToLast()
 }
