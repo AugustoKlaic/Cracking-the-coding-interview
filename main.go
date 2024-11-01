@@ -19,4 +19,5 @@ func main() {
 
 	linkedLists.ExecuteRemoveDups()
 	linkedLists.ExecuteKthToLast()
+	linkedLists.ExecuteDeleteMiddleNode()
 }
