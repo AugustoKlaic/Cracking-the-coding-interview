@@ -2,7 +2,7 @@ package main
 
 import (
 	arraysAndStrings "cracking-the-coding-interview/arraysAndstrings"
-	linkedLists "cracking-the-coding-interview/linkedLists"
+	"cracking-the-coding-interview/linkedLists"
 )
 
 func main() {
@@ -20,4 +20,5 @@ func main() {
 	linkedLists.ExecuteRemoveDups()
 	linkedLists.ExecuteKthToLast()
 	linkedLists.ExecuteDeleteMiddleNode()
+	linkedLists.ExecutePartition()
 }

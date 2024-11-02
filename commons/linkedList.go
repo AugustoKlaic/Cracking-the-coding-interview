@@ -27,15 +27,19 @@ func (list *LinkedList) GetHead() *Node {
 	return list.head
 }
 
-func (list *LinkedList) appendToTail(data int) {
-	end := NewNode(data)
-	node := list.head
+func (list *LinkedList) AppendToTail(newNode *Node) {
+	end := newNode
 
-	for node.next != nil {
-		node = node.next
+	if list.head == nil {
+		list.head = newNode
+	} else {
+		node := list.head
+
+		for node.next != nil {
+			node = node.next
+		}
+		node.next = end
 	}
-
-	node.next = end
 }
 
 func (list *LinkedList) deleteNode(head *Node, data int) *Node {
@@ -57,4 +61,13 @@ func (list *LinkedList) deleteNode(head *Node, data int) *Node {
 		node = node.next
 	}
 	return head
+}
+
+func (list *LinkedList) PrintList() {
+	head := list.GetHead()
+
+	for head != nil {
+		println(head.Data)
+		head = head.GetNext()
+	}
 }
