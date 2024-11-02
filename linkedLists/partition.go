@@ -20,8 +20,12 @@ func partition(list *LinkedList, partitionValue int) *LinkedList {
 		node = node.GetNext()
 	}
 
-	lastLeftNode.SetNext(rightList.GetHead())
-	return leftList
+	if lastLeftNode == nil {
+		return rightList
+	} else {
+		lastLeftNode.SetNext(rightList.GetHead())
+		return leftList
+	}
 }
 
 func ExecutePartition() {
