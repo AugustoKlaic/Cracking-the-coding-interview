@@ -25,6 +25,14 @@ func deleteMiddleNode(linkedList *LinkedList, indexToDelete int) {
 	}
 }
 
+func deleteMiddleNodeOnlyAccessingTheNode(node *Node) {
+	if node.GetNext() != nil || node != nil {
+		var next *Node = node.GetNext()
+		node.Data = next.Data
+		node.SetNext(next.GetNext())
+	}
+}
+
 func ExecuteDeleteMiddleNode() {
 	node1 := NewNode(1)
 	node2 := NewNode(2)
@@ -35,7 +43,7 @@ func ExecuteDeleteMiddleNode() {
 
 	linkedList := NewLinkedList(*node1, *node2, *node3, *node4, *node5, *node6)
 
-	deleteMiddleNode(linkedList, 1)
+	deleteMiddleNode(linkedList, 2)
 
 	var node = linkedList.GetHead()
 
