@@ -37,5 +37,5 @@ func ExecutePartition() {
 
 	leftList := partition(linkedList, 4)
 
-	leftList.PrintList()
+	PrintList(leftList)
 }

@@ -49,3 +49,12 @@ func CreatePermutations(wordToPermute string, startOfString, sizeOfString int) [
 	}
 	return permutedWords
 }
+
+func PrintList(list *LinkedList) {
+	head := list.GetHead()
+
+	for head != nil {
+		println(head.Data)
+		head = head.GetNext()
+	}
+}

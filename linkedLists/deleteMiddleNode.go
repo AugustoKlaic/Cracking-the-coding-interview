@@ -45,11 +45,6 @@ func ExecuteDeleteMiddleNode() {
 
 	deleteMiddleNode(linkedList, 2)
 
-	var node = linkedList.GetHead()
-
-	for node != nil {
-		println(node.Data)
-		node = node.GetNext()
-	}
+	PrintList(linkedList)
 
 }

@@ -51,11 +51,6 @@ func ExecuteRemoveDups() {
 
 	removeDuplicates(linkedList)
 
-	node := linkedList.GetHead()
-
-	for node != nil {
-		println(node.Data)
-		node = node.GetNext()
-	}
+	PrintList(linkedList)
 
 }

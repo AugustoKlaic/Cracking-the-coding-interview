@@ -62,12 +62,3 @@ func (list *LinkedList) deleteNode(head *Node, data int) *Node {
 	}
 	return head
 }
-
-func (list *LinkedList) PrintList() {
-	head := list.GetHead()
-
-	for head != nil {
-		println(head.Data)
-		head = head.GetNext()
-	}
-}
