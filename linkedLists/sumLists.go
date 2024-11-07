@@ -42,6 +42,10 @@ func sumLists(firstList, secondList *LinkedList) *LinkedList {
 		result.AppendToTail(NewNode(dataSum))
 	}
 
+	if overflow {
+		result.AppendToTail(NewNode(1))
+	}
+
 	return result
 }
 
