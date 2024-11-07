@@ -19,7 +19,6 @@ func sumLists(firstList, secondList *LinkedList) *LinkedList {
 		if nodeToSumOne != nil {
 			valueToSumOne = nodeToSumOne.Data
 			nodeToSumOne = nodeToSumOne.GetNext()
-
 		}
 
 		if nodeToSumTwo != nil {
