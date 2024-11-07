@@ -1,7 +1,7 @@
 package main
 
 import (
-	arraysAndStrings "cracking-the-coding-interview/arraysAndstrings"
+	"cracking-the-coding-interview/arraysAndstrings"
 	"cracking-the-coding-interview/linkedLists"
 )
 
@@ -21,4 +21,5 @@ func main() {
 	linkedLists.ExecuteKthToLast()
 	linkedLists.ExecuteDeleteMiddleNode()
 	linkedLists.ExecutePartition()
+	linkedLists.ExecuteSumLists()
 }

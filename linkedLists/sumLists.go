@@ -16,19 +16,22 @@ func sumLists(firstList, secondList *LinkedList) *LinkedList {
 		var valueToSumOne, valueToSumTwo = 0, 0
 		var dataSum = 0
 
-		if overflow {
-			dataSum++
-		}
-
 		if nodeToSumOne != nil {
 			valueToSumOne = nodeToSumOne.Data
+			nodeToSumOne = nodeToSumOne.GetNext()
+
 		}
 
 		if nodeToSumTwo != nil {
 			valueToSumTwo = nodeToSumTwo.Data
+			nodeToSumTwo = nodeToSumTwo.GetNext()
 		}
 
 		dataSum = valueToSumOne + valueToSumTwo
+
+		if overflow {
+			dataSum++
+		}
 
 		if dataSum > 9 {
 			overflow = true
@@ -47,6 +50,7 @@ func ExecuteSumLists() {
 	node1 := NewNode(7)
 	node2 := NewNode(1)
 	node3 := NewNode(6)
+
 	node4 := NewNode(5)
 	node5 := NewNode(9)
 	node6 := NewNode(2)
