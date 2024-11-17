@@ -1,7 +1,7 @@
 package arraysAndStrings
 
 import (
-	utils "cracking-the-coding-interview/commons"
+	utils "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
 )
 
 // Given an image represented by N x N matrix, where each pixel in the image is represented by an integer, write a code

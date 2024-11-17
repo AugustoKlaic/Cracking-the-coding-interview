@@ -1,6 +1,8 @@
 package arraysAndStrings
 
-import utils "cracking-the-coding-interview/commons"
+import (
+	utils "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
+)
 
 func zeroMatrix(matrix *[][]int) {
 	var matrixLengthX = len(*matrix)

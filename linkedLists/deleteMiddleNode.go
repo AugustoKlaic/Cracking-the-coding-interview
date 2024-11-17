@@ -1,6 +1,6 @@
 package linkedLists
 
-import . "cracking-the-coding-interview/commons"
+import . "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
 
 // Implement an algorithm to delete a node in the middle (all the nodes between the first and last) of singly linked list,
 // given only access to that node

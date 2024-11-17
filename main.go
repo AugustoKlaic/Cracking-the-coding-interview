@@ -1,8 +1,8 @@
 package main
 
 import (
-	"cracking-the-coding-interview/arraysAndstrings"
-	"cracking-the-coding-interview/linkedLists"
+	"github.com/AugustoKlaic/Cracking-the-coding-interview/arraysAndstrings"
+	"github.com/AugustoKlaic/Cracking-the-coding-interview/linkedLists"
 )
 
 func main() {

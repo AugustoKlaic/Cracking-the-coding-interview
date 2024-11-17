@@ -1,6 +1,6 @@
 package linkedLists
 
-import . "cracking-the-coding-interview/commons"
+import . "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
 
 // Write code to remove duplicates from an unsorted linked list
 

@@ -1,6 +1,6 @@
 package linkedLists
 
-import . "cracking-the-coding-interview/commons"
+import . "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
 
 // Implement an algorithm to find the kth to last element of a singly linked list
 

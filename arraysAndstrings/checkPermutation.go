@@ -1,7 +1,7 @@
 package arraysAndStrings
 
 import (
-	utils "cracking-the-coding-interview/commons"
+	utils "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
 )
 
 // Given two strings, write a method to decide if one is permutation of the other

@@ -1,6 +1,6 @@
 package linkedLists
 
-import . "cracking-the-coding-interview/commons"
+import . "github.com/AugustoKlaic/Cracking-the-coding-interview/commons"
 
 // Write code to partition a linked list around a value X, such that all nodes less than X come before all nodes greater
 // than or equal to X. The partitionEasyMode element X can appear in any position (last, first, middle) in the right partitionEasyMode
