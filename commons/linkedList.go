@@ -62,3 +62,26 @@ func (list *LinkedList) deleteNode(head *Node, data int) *Node {
 	}
 	return head
 }
+
+func (list *LinkedList) Size() int {
+	var size int = 0
+	var node *Node = list.head
+
+	for node != nil {
+		size++
+		node = node.GetNext()
+	}
+
+	return size
+}
+
+func PadList(list *LinkedList, padSize int) {
+
+	for i := 0; i < padSize; i++ {
+		var oldHead *Node = list.head
+		var newHead = NewNode(0)
+		newHead.SetNext(oldHead)
+
+		list.head = newHead
+	}
+}
